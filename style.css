@@ -6,8 +6,11 @@
     font-family: Manrope, sans-serif;
 }
 
+body {
+    padding: 0 20px;
+}
 
-.header-container {
+.header {
     max-width: 1000px;
     width: 100%;
     margin: 64px auto 0;
@@ -19,7 +22,7 @@
     margin: 80px auto 0;
 }
 
-.header-container .header {
+.header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +32,85 @@
     border: 1px solid rgba(0, 0, 0, 1);
     background-color: rgba(51, 51, 51, 1);
 }
+
+
+.burger-menu {
+    max-width: 728px;
+    width: 100%;
+    margin: 64px auto 0;
+    padding: 18px 24px;
+    border-radius: 32px;
+    border: 1px solid black;
+    background: rgba(51, 51, 51, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+
+.burger-menu .log {
+    display: block;
+}
+
+.burger-menu .log-x {
+    width: 56px;
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 16px;
+    background: rgba(118, 117, 123, 1);
+}
+
+
+.burger-menu .header {
+    margin: 0 auto;
+    background: rgba(51, 51, 51, 1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger-menu .list {
+    padding: 8px;
+    background: rgba(51, 51, 51, 1);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu .item-list.enter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(51, 51, 51, 1);
+
+}
+
+.burger-menu .item-list {
+    border-bottom: 1px solid rgba(118, 117, 123, 1);
+    background: rgba(51, 51, 51, 1);
+    height: 76px;
+    padding: 24px;
+}
+
+.burger-menu .item-list.active {
+    color: rgba(245, 250, 147, 1);
+    position: relative;
+}
+
+.burger-menu .item-list.faq {
+    border: none;
+}
+
+.burger-menu .cursor {
+    background: rgba(51, 51, 51, 1);
+    position: absolute;
+    bottom: 13px;
+    left: 123px;
+}
+
 
 .logo-menu {
     display: flex;
@@ -74,14 +156,32 @@
     border: 0;
     cursor: pointer;
     background: none;
+    height: 40px;
 }
 
 .log {
-    background-color: rgba(51, 51, 51, 1);
+    display: block;
+    width: 56px;
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 16px;
+    background: rgba(235, 235, 235, 1);
 }
 
-.login-adapt {
+
+#burger,
+[for=burger] {
     display: none;
+    height: 40px;
+    background: none;
+}
+
+.log-adapt {
+    width: 56px;
+    height: 40px;
+    padding: 0px 16px;
+    border-radius: 16px;
+    background: rgba(118, 117, 123, 1);
 }
 
 .hero-wrapper {
@@ -109,7 +209,7 @@
     position: relative;
 }
 
-.hero-text .row {
+.hero-text {
     font-size: 68px;
     font-weight: 800;
     line-height: 75px;
@@ -145,7 +245,6 @@
 .your-email {
     max-width: 317px;
     width: 100%;
-    height: 61px;
     padding: 18px 14px;
     border-radius: 18px;
     border: 1px;
@@ -160,11 +259,12 @@
 .write-action {
     display: flex;
     max-width: 222px;
+    width: 100%;
     padding: 18px 14px;
     gap: 8px;
     border-radius: 18px;
     background: rgba(245, 250, 147, 1);
-    text-decoration: none;
+    align-items: center;
 }
 
 .write {
@@ -181,7 +281,7 @@
 
 }
 
-.cards {
+#cards {
     display: flex;
     gap: 24px;
 }
@@ -198,22 +298,22 @@
 }
 
 
-
-
-
 .first-card {
-    width: 80px;
-    height: 80px;
+    max-width: 80px;
+    width: 100%;
+    align-self: start;
 }
 
 .second-card {
-    width: 80px;
-    height: 80px;
+    max-width: 80px;
+    width: 100%;
+    align-self: center;
 }
 
 .third-card {
-    width: 80px;
-    height: 80px;
+    max-width: 80px;
+    width: 100%;
+    align-self: end;
 }
 
 .text-card {
@@ -229,6 +329,7 @@
     color: white;
 }
 
+
 .text-card .description {
     font-size: 18px;
     font-weight: 500;
@@ -236,11 +337,231 @@
     color: white;
 }
 
-.screens {
+#screens {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
+
+.profile-check {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-end;
+    padding: 0 50px;
+    gap: 90px;
+}
+
+.profile {
+    max-width: 658px;
+    width: 100%;
+    padding: 29px 36px;
+    border-radius: 24px;
+    border: 2px solid rgba(51, 51, 51, 1);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-51%, -61%);
+}
+
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    max-width: 513px;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+}
+
+.my-photo {
+    max-width: 182px;
+    width: 100%;
+}
+
+
+.short-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ffffff;
+    max-width: 251px;
+    width: 100%;
+}
+
+.my-name {
+    font-size: 31px;
+    font-weight: 800;
+    line-height: 34px;
+}
+
+.description {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+}
+
+.writer-action {
+    margin-top: 19px;
+    max-width: 105px;
+    width: 100%;
+    padding: 8px 6px;
+    border-radius: 8px;
+    background: rgba(249, 214, 158, 1);
+    color: black;
+    display: flex;
+    gap: 8px;
+
+}
+
+.writer-action .writer {
+    width: 100%;
+    background: rgba(249, 214, 158, 1);
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 11px;
+    text-align: center;
+}
+
+.writer-action .arrow {
+    background: rgba(249, 214, 158, 1);
+    width: 11px;
+}
+
+
+.work-experience {
+    max-width: 545px;
+    width: 100%;
+    padding: 18px;
+    border-radius: 23px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.h3exp {
+    color: rgba(170, 219, 107, 1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.company .period {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #76757B;
+}
+
+.company-link {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #76757B;
+}
+
+.job .position {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background: rgba(255, 175, 176, 1);
+    align-items: center;
+    max-width: 220px;
+    width: 100%;
+    padding: 21px;
+    gap: 16px;
+    border-radius: 21px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    background: rgba(255, 175, 176, 1);
+}
+
+.project .project-name {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 35px;
+    background: rgba(255, 175, 176, 1);
+}
+
+.project .project-description {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    background: rgba(255, 175, 176, 1);
+}
+
+.show-project {
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(255, 175, 176, 1);
+}
+
+.show-project a {
+    border: 1px solid #333333;
+    color: black;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 175, 176, 1);
+    max-width: 117px;
+    width: 100%;
+    padding: 12px 9px;
+    gap: 5px;
+    border-radius: 12px;
+    justify-content: space-between;
+}
+
+.show-project .see {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    background: rgba(255, 175, 176, 1);
+}
+
+.project-photo {
+    background: rgba(255, 175, 176, 1);
+
+}
+
+.arrow-see {
+    background: rgba(255, 175, 176, 1);
+    width: 11px;
+}
+
+.Arrival {
+    background: rgba(255, 175, 176, 1);
+    max-width: 170px;
+    width: 100%;
+}
+
 
 .block-text {
     display: flex;
@@ -262,7 +583,6 @@
 .block-text .button-free {
     max-width: 245px;
     width: 100%;
-    height: 61px;
     padding: 18px 13px;
     border-radius: 18px;
     border: 1px solid rgba(51, 51, 51, 1);
@@ -283,7 +603,7 @@ h3 {
     margin-left: 24px;
 }
 
-.price-wrapper {
+#price-wrapper {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -297,6 +617,7 @@ h3 {
 .price-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 56px;
     max-width: 484px;
     width: 100%;
@@ -349,7 +670,17 @@ h3 {
     position: absolute;
     right: 32px;
     top: -25px;
-    background: none;
+    max-width: 146px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    background: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
 }
 
 .try-servers {
@@ -398,10 +729,10 @@ h3 {
     cursor: pointer;
 }
 
-.faq-wrapper {
+#faq-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 10px;
 }
 
 .list-faq {
@@ -413,10 +744,15 @@ h3 {
 .faq-item {
     display: flex;
     flex-direction: column;
-    gap: 32px;
     padding: 24px;
     border-radius: 32px;
     border: 1px solid rgba(51, 51, 51, 1);
+    cursor: pointer;
+}
+
+
+.faq-item.top {
+    margin-top: 22px;
 }
 
 .faq-item .answer {
@@ -427,6 +763,7 @@ h3 {
     font-weight: 500;
     line-height: 26px;
     color: rgba(118, 117, 123, 1);
+    margin-top: 32px;
 }
 
 .faq-item .title {
@@ -438,26 +775,30 @@ h3 {
     justify-content: space-between;
 }
 
-.faq-item .title::after {
-    content: url(icons/plus.svg);
-    cursor: pointer;
+summary::-webkit-details-marker {
+    display: none;
 }
 
-.faq-item .title.active::after {
-    content: url(icons/minus.svg);
-    cursor: pointer;
+details summary::after {
+    content: url(icons/plus.svg);
 }
+
+details[open] summary::after {
+    content: url(icons/minus.svg);
+}
+
 
 .footer-wrapper {
     display: flex;
     gap: 24px;
+
 }
 
 
 .logo-socials {
     display: flex;
     flex-direction: column;
-    gap: 76px;
+    gap: 44px;
     max-width: 232px;
     width: 100%;
 
@@ -501,6 +842,8 @@ a {
 
 
 .container-feedback {
+    max-width: 1000px;
+    width: 100%;
     margin: 100px auto 64px;
     display: flex;
     justify-content: flex-end;
@@ -510,11 +853,46 @@ a {
     display: flex;
     border: 0;
     cursor: pointer;
+
 }
 
-@media screen and (max-width: 729px) {
+.burger-menu {
+    display: none;
+}
+
+
+.feedback {
+    max-width: 56px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 99px;
+    border: 1px solid rgba(51, 51, 51, 1);
+    background: rgba(245, 250, 147, 1);
+    position: fixed;
+    bottom: 64px;
+}
+
+.feedback-img {
+    background: rgba(245, 250, 147, 1);
+}
+
+
+@media screen and (max-width: 1000px) {
     .header-container {
-        margin: 64px 20px 0;
+        margin: 64px auto 0;
+    }
+
+    .profile {
+        max-width: 545px;
+    }
+
+    #cards {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 728px;
+        flex-wrap: wrap;
     }
 
     .container {
@@ -529,10 +907,15 @@ a {
         display: none;
     }
 
-    .login-adapt {
+    [for=burger] {
         display: block;
-        background-color: rgba(51, 51, 51, 1);
     }
+
+    #burger:checked+label+.burger-menu {
+        display: block;
+    }
+
+
 
     .hero-block {
         background: url(./image/hero-pic.svg);
@@ -543,41 +926,167 @@ a {
 
     .hero-pic {
         position: absolute;
-        right: 0;
+        right: 40px;
         opacity: 20%;
-        width: 318px;
-        height: 340px;
+        max-width: 318px;
+        width: 100%;
     }
 
-    .cards {
-        flex-direction: column;
-    }
 
-    .card {
-        max-width: 728px;
-        flex-wrap: wrap;
-    }
 
     .container-feedback {
-        margin: 100px 20px 64px;
+        margin: 100px auto 64px;
     }
 }
 
-
-@media screen and (max-width: 336px) {
-    .header-container {
-        margin: 64px 20px 0;
+@media screen and (max-width: 783px) {
+    .footer-wrapper {
+        flex-wrap: wrap;
     }
 
+    .profile-check {
+        gap: 40px;
+    }
+
+    .profile {
+        max-width: 473px;
+        padding: 21px 26px;
+        gap: 26px;
+        border-radius: 17px;
+    }
+
+    .my-photo {
+        max-width: 131px;
+        width: 100%;
+
+    }
+
+    .about-me {
+        max-width: 369px;
+
+    }
+
+    .my-name {
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 24px;
+    }
+
+    .description {
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 9px;
+    }
+
+    .short-description {
+        max-width: 180px;
+    }
+
+    .writer-action {
+        max-width: 76px;
+        padding: 6px 4px;
+        gap: 3px;
+        border-radius: 6px;
+    }
+
+    .work-experience {
+        max-width: 392px;
+        padding: 13px 13px 3px;
+        gap: 17px;
+        border-radius: 17px;
+    }
+
+    .h3exp {
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    .company {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .company .period {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .company-link {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .job .position {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .job-list {
+        gap: 15px;
+    }
+
+    .item {
+        max-width: 158px;
+        padding: 15px;
+        gap: 11px;
+        border-radius: 15px;
+    }
+
+    .Arrival {
+        max-width: 122px;
+    }
+
+    .project {
+        gap: 8px;
+    }
+
+    .project .project-name {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+    .project .project-description {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .show-project a {
+        width: 85px;
+        padding: 8px 7px;
+        gap: 4px;
+        border-radius: 8px;
+    }
+
+    .show-project .see {
+        font-size: 8px;
+        line-height: 11px;
+    }
+
+    .profile-check {
+        padding: 0 36px;
+    }
+
+}
+
+@media screen and (max-width: 663px) {
+    .header-container {
+        margin: 64px auto 0;
+    }
+    
+
     .container {
-        margin: 80px 20px 0;
+        margin: 80px auto 0;
     }
 
     .container-feedback {
-        margin: 100px 20px 64px;
+        margin: 100px auto 64px;
     }
 
-    .hero-text .row {
+.profile {
+    max-width: 350px;
+}
+
+    .hero-text {
         font-size: 42px;
         font-weight: 700;
         line-height: 54px;
@@ -586,7 +1095,7 @@ a {
     .illustr-here {
         width: 34px;
         height: 30px;
-        right: 37px;
+        right: 43%;
         top: 0;
     }
 
@@ -599,10 +1108,11 @@ a {
 
     .hero-pic {
         top: 211px;
-        right: -19px;
-        width: 257.91px;
-        height: 237px;
+        right: 0;
+        max-width: 258px;
+        width: 100%;
     }
+
 
     .price-cards {
         flex-direction: column;
@@ -614,8 +1124,160 @@ a {
 
 
 
+
+
     .footer-wrapper {
         flex-direction: column;
     }
 
 }
+
+@media screen and (max-width: 365px) {
+    .underline {
+        top: auto;
+        bottom: -15px;
+    }
+
+    .illustr-here {
+        right: 18px;
+        top: -11px;
+    }
+}
+
+@media screen and (max-width: 486px) {
+
+        .profile {
+            max-width: 220px;
+            padding: 10px 12px;
+            border-radius: 8px;
+        }
+    
+        .about-me {
+            max-width: 172px
+        }
+    
+        .my-photo {
+            max-width: 61px;
+        }
+    
+        .short-description {
+            max-width: 84px;
+            gap: 10px;
+        }
+    
+        .my-name {
+            font-size: 10px;
+            line-height: 11px;
+        }
+    
+        .description {
+            font-size: 4px;
+            line-height: 4px;
+        }
+    
+        .writer-action {
+            width: 35px;
+            padding: 3px 2px;
+            gap: 1px;
+            border-radius: 3px;
+            margin: 0;
+        }
+    
+        .writer-action .writer {
+            font-size: 3px;
+            line-height: 4px;
+        }
+    
+    
+        .writer-action .arrow {
+            width: 2px
+        }
+    
+    
+        .work-experience {
+            width: 182px;
+            padding: 6px;
+            gap: 8px;
+            border-radius: 8px;
+        }
+    
+        .h3exp {
+            font-size: 6px;
+            line-height: 6px;
+        }
+    
+        .job-list {
+            gap: 7px;
+        }
+    
+        .company {
+            font-size: 6px;
+            line-height: 7px;
+        }
+    
+        .company .period {
+            font-size: 4px;
+            line-height: 5px;
+        }
+    
+        .company-link {
+            font-size: 4px;
+            line-height: 6px;
+        }
+    
+        .job {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+    
+        .job .position {
+            font-size: 4px;
+            line-height: 6px;
+        }
+    
+        .profile-check {
+            padding: 0 16px;
+            gap: 10px;
+        }
+    
+        .item {
+            width: 74px;
+            padding: 7px;
+            gap: 5px;
+            border-radius: 7px;
+        }
+    
+    
+        .project {
+            width: 60px;
+            gap: 4px;
+        }
+    
+        .project .project-name {
+            font-size: 9px;
+            line-height: 12px;
+        }
+    
+        .project .project-description {
+            font-size: 4px;
+            line-height: 6px;
+        }
+    
+        .show-project a {
+            max-width: 40px;
+            padding: 4px 3px;
+            gap: 2px;
+            border-radius: 4px;
+        }
+    
+        .show-project .see {
+            font-size: 4px;
+            line-height: 5px;
+        }
+    
+        .show-project .arrow-see {
+            width: 4px;
+        }
+
+    }
