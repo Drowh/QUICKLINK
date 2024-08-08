@@ -34,16 +34,14 @@ body {
 
 
 .burger-menu {
-    max-width: 728px;
     width: 100%;
-    padding: 18px 24px;
+    padding: 112px 24px 18px;
     border-radius: 32px;
     border: 1px solid black;
     background: rgba(51, 51, 51, 1);
     display: flex;
     flex-direction: column;
     gap: 54px;
-    z-index: 2;
 }
 
 
@@ -838,18 +836,6 @@ a {
 }
 
 
-.burger-wrapper {
-    max-width: 56px;
-    width: 100%;
-    padding: 16px;
-    background: rgba(118, 117, 123, 1);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-
 .burger-checkbox {
     position: absolute;
     visibility: hidden;
@@ -857,13 +843,21 @@ a {
 
 .burger {
     cursor: pointer;
-    display: block;
-    position: relative;
-    border: none;
-    background: transparent;
-    max-width: 16px;
+    position: absolute;
     height: 6px;
     width: 100%;
+    z-index: 3;
+    border-radius: 16px;
+    background: rgba(118, 117, 123, 1);
+    max-width: 56px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 21px;
+    top: 20px;
+    padding: 20px;
+    display: none;
 }
 
 .burger::before,
@@ -878,33 +872,31 @@ a {
 }
 
 .burger::before {
-    top: 54%;
     transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
-    left: 5%;
     width: 14px;
+    top: 16px;
 }
 
 .burger::after {
     transition: bottom .3s .15s, transform .3s;
-    bottom: 5px;
-    left: 5%;
+    bottom: 17px;
     width: 14px;
 }
 
 .burger-checkbox:checked+.burger::before {
-    top: 1px;
+    top: 18px;
     transform: rotate(45deg);
     transition: box-shadow .15s, top .3s, transform .3s .15s;
     width: 18px;
-    left: -1px;
+    left: 19px;
 }
 
 .burger-checkbox:checked+.burger::after {
-    bottom: 3px;
+    bottom: 19px;
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .15s;
     width: 18px;
-    left: -1px;
+    left: 19px;
 }
 
 .feedback {
@@ -928,6 +920,10 @@ a {
         position: relative;
     }
 
+    .burger {
+        display: block;
+    }
+
     .profile {
         max-width: 545px;
     }
@@ -937,7 +933,7 @@ a {
     }
 
     .card {
-        max-width: 728px;
+        max-width: 1000px;
         flex-wrap: wrap;
     }
 
@@ -953,6 +949,7 @@ a {
 
     .burger-wrapper {
         display: flex;
+        z-index: 2;
     }
 
     #burger-checkbox:checked+label+.burger-menu {
@@ -970,9 +967,10 @@ a {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.9);
+        z-index: -1;
     }
 
-    #burger-checkbox:checked+label+.burger-menu+.shadow {
+    #burger-checkbox:checked+.burger+.burger-menu+.shadow {
         display: block;
     }
 
@@ -997,6 +995,8 @@ a {
 @media screen and (max-width: 783px) {
     .footer-wrapper {
         flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 110px 0 0;
     }
 
     .profile-check {
