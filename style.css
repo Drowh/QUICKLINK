@@ -875,12 +875,14 @@ a {
     transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
     width: 14px;
     top: 16px;
+    left: 39%;
 }
 
 .burger::after {
     transition: bottom .3s .15s, transform .3s;
     bottom: 17px;
     width: 14px;
+    left: 39%;
 }
 
 .burger-checkbox:checked+.burger::before {
