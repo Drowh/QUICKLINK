@@ -28,37 +28,35 @@
             <button class="login">
                 <img src="./icons/login.svg" alt="log" class="log">
             </button>
-            <input type="checkbox" id="burger">
-            </input>
-            <label for="burger">
-                <img src="./icons/login-adapt.svg" alt="log-adapt" class="log-adapt">
-            </label>
-            <div class="burger-menu">
-                <div class="header">
-                    <img src="./icons/burger-log.svg" alt="log-x" class="log-x">
+            <div class="burger-wrapper">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label class="burger" for="burger-checkbox"></label>
+                <div class="burger-menu">
+                    <div class="list">
+                        <a href="#" class="item-list enter">
+                            Вход
+                            <button class="login">
+                                <img src="./icons/login.svg" alt="log" class="log">
+                            </button>
+                        </a href="#">
+                        <a href="#" class="item-list">
+                            Что это?
+                        </a href="#">
+                        <a href="#" class="item-list">
+                            Как это выглядит?
+                        </a href="#">
+                        <a href="#" class="item-list">
+                            Сколько стоит?
+                        </a href="#">
+                        <a href="#" class="item-list faq">
+                            FAQ
+                        </a href="#">
+                    </div>
                 </div>
-                <div class="list">
-                    <a href="#" class="item-list enter">
-                        Вход
-                        <button class="login">
-                            <img src="./icons/login.svg" alt="log" class="log">
-                        </button>
-                    </a href="#">
-                    <a href="#" class="item-list active">
-                        Что это?
-                        <img src="./image/cursor.svg" alt="cursor" class="cursor">
-                    </a href="#">
-                    <a href="#" class="item-list">
-                        Как это выглядит?
-                    </a href="#">
-                    <a href="#" class="item-list">
-                        Сколько стоит?
-                    </a href="#">
-                    <a href="#" class="item-list faq">
-                        FAQ
-                    </a href="#">
-                </div>
+                <div class="shado"></div>
             </div>
+
+
         </div>
     </header>
 
@@ -156,7 +154,7 @@
                                         (2021-по наст. время)
                                     </span>
                                 </div>
-                                    <a href="https://www.arrival.com" class="company-link">arrival.com</a>
+                                <a href="https://www.arrival.com" class="company-link">arrival.com</a>
                                 <div class="position">Senior Front-End разработчик</div>
                             </div>
                             <div class="job">
@@ -166,7 +164,7 @@
                                         (2018-2021)
                                     </span>
                                 </div>
-                                    <a href="https://www.apple.com" class="company-link">apple.com</a>
+                                <a href="https://www.apple.com" class="company-link">apple.com</a>
                                 <div class="position">Middle+ Front-End разработчик</div>
                             </div>
                             <div class="job">
@@ -176,7 +174,7 @@
                                         (2017-2018)
                                     </span>
                                 </div>
-                                    <a href="https://www.ibm.com" class="company-link">ibm.com</a>
+                                <a href="https://www.ibm.com" class="company-link">ibm.com</a>
                                 <div class="position">Middle Front-End разработчик</div>
                             </div>
                         </div>
@@ -273,7 +271,7 @@
             <div id="faq-wrapper">
                 <h3>FAQ</h3>
                 <div class="list-faq">
-                    <div class="faq-item top">
+                    <div class="faq-item">
                         <details>
                             <summary class="title">
                                 Зачем мне нужен Quicklink?
@@ -303,63 +301,64 @@
                             </div>
                         </details>
                     </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary class="title">
+                                Как я могу использовать свой профиль?
+                            </summary>
+                            <div class="answer">
+                                <p class="answer-text">
+                                    text
+                                </p>
+                                <p class="answer-text">
+                                    text
+                                </p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary class="title">
+                                Как много ссылок на профиль я могу создать?
+                            </summary>
+                            <div class="answer">
+                                <p class="answer-text">
+                                    text
+                                </p>
+                                <p class="answer-text">
+                                    text
+                                </p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary class="title">
+                                Что дает премиум подписка?
+                            </summary>
+                            <div class="answer">
+                                <p class="answer-text">
+                                    text
+                                </p>
+                                <p class="answer-text">
+                                    text
+                                </p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary class="title">
+                                Какие ограничения есть на базовом тарифе?
+                            </summary>
+                            <div class="answer">
+                                <p class="answer-text">
+                                    text
+                                </p>
+                                <p class="answer-text">
+                                    text
+                                </p>
+                        </details>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <details>
-                        <summary class="title">
-                            Как я могу использовать свой профиль?
-                        </summary>
-                        <div class="answer">
-                            <p class="answer-text">
-                                text
-                            </p>
-                            <p class="answer-text">
-                                text
-                            </p>
-                    </details>
-                </div>
-                <div class="faq-item">
-                    <details>
-                        <summary class="title">
-                            Как много ссылок на профиль я могу создать?
-                        </summary>
-                        <div class="answer">
-                            <p class="answer-text">
-                                text
-                            </p>
-                            <p class="answer-text">
-                                text
-                            </p>
-                    </details>
-                </div>
-                <div class="faq-item">
-                    <details>
-                        <summary class="title">
-                            Что дает премиум подписка?
-                        </summary>
-                        <div class="answer">
-                            <p class="answer-text">
-                                text
-                            </p>
-                            <p class="answer-text">
-                                text
-                            </p>
-                    </details>
-                </div>
-                <div class="faq-item">
-                    <details>
-                        <summary class="title">
-                            Какие ограничения есть на базовом тарифе?
-                        </summary>
-                        <div class="answer">
-                            <p class="answer-text">
-                                text
-                            </p>
-                            <p class="answer-text">
-                                text
-                            </p>
-                    </details>
-                </div>
+
             </div>
         </div>
         </div>
